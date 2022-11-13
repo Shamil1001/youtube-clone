@@ -7,7 +7,7 @@ header {
   margin: 0;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  justify-content: space-between;
 }
 
 .logo {
@@ -16,10 +16,22 @@ header {
   cursor: pointer;
 }
 
+.center-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+}
+
 .search {
   margin-top: 40px;
   width: 40vw;
-  height: 35px;
+  max-width: 500px;
+  height: 40px;
   border: none;
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;
@@ -27,20 +39,41 @@ header {
   padding-left: 15px;
 }
 
-.submit-search {
-  margin-top: 39px;
-  height: 38px;
+.search-form .submit-search {
+  margin-top: 40px;
+  height: 40px;
   width: 50px;
   outline: none;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-.microphone {
+.center-nav .microphone {
   margin-top: 40px;
   width: 35px;
   height: 35px;
   cursor: pointer;
   border: 1px solid black;
   border-radius: 50%;
+}
+
+.right-nav {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-right: 20px;
+}
+
+.right-nav .add-video,
+.right-nav .notification,
+.right-nav .profile {
+  margin-top: 40px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
 }
