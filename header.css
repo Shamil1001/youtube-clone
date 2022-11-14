@@ -3,11 +3,18 @@
   padding: 0;
 }
 
+body {
+  display: grid;
+  grid-template-columns: 0.1fr 1.9fr;
+}
+
 header {
   margin: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-bottom: 2px solid black;
+  height: 100px;
 }
 
 .logo {
@@ -73,6 +80,23 @@ header {
 .right-nav .notification,
 .right-nav .profile {
   margin-top: 40px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.left-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 25px;
+  height: 100%;
+}
+
+.left-scroll .home,
+.left-scroll .shorts,
+.left-scroll .subscribers,
+.left-scroll .library {
   width: 35px;
   height: 35px;
   cursor: pointer;
