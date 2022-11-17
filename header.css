@@ -8,6 +8,17 @@ body {
   grid-template-columns: 0.1fr 1.9fr;
 }
 
+.center {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.cards {
+  height: 100%;
+  color: white;
+}
+
 header {
   margin: 0;
   display: flex;
