@@ -115,6 +115,7 @@ header .up {
   background-color: gray;
 }
 
+.left-scroll .menu,
 .left-scroll .home,
 .left-scroll .shorts,
 .left-scroll .subscribers,
@@ -140,4 +141,33 @@ header .up {
   cursor: pointer;
   padding: 10px;
   background-color: gray;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+.cards p {
+  color: white;
+}
+
+.cards .video-img {
+  width: 100%;
+}
+.video-title {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+@media (max-width: 1330px) {
+  .video {
+    width: 55%;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
