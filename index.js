@@ -31,3 +31,14 @@ function displayVideo() {
   }
 }
 displayVideo();
+
+function openMenu() {
+  const menu = document.getElementsByClassName("menu")[0];
+  const leftScroll = document.getElementsByClassName("left-scroll")[0];
+
+  menu.addEventListener("click", function () {
+    leftScroll.classList.toggle("left-active");
+  });
+}
+
+openMenu();
