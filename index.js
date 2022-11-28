@@ -36,9 +36,15 @@ function openMenu() {
   const menu = document.getElementsByClassName("menu")[0];
   const leftScroll = document.getElementsByClassName("left-scroll")[0];
   const iconTitle = document.getElementsByClassName("icon-title");
+  const center = document.getElementsByClassName("center")[0];
+  // const bod = document.getElementByTagName("body");
 
   menu.addEventListener("click", function () {
-    leftScroll.classList.toggle("left-active");
+    // bod.style.gridTemplateColumns = "5% 95%";
+    leftScroll.classList.toggle("active");
+    center.classList.toggle("act");
+    // leftScroll.style.width = "15%";
+    // document.getElementByTagName("body").style.gridTemplateColumns = "5% 95%";
     for (let i = 0; i < 4; i++) {
       document
         .getElementsByClassName("icon-title")
