@@ -34,7 +34,7 @@ displayVideo();
 
 function openMenu() {
   const menu = document.getElementsByClassName("menu")[0];
-  const leftScroll = document.getElementsByClassName("left-scroll")[0];
+  const leftScroll = document.getElementsByClassName("left")[0];
   const iconTitle = document.getElementsByClassName("icon-title");
   const center = document.getElementsByClassName("center")[0];
   // const bod = document.getElementByTagName("body");
