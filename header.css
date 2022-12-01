@@ -11,7 +11,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 100px;
-  /* width: 95%; */
 }
 
 header {
@@ -26,20 +25,20 @@ header .up {
   flex-direction: row;
 }
 
-.left-scroll .left .logo-menu {
+.logo-menu {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
-.left-scroll .left .menu {
-  margin-top: -5px;
+.menu {
+  margin: 10px;
 }
 
-.left-scroll .left .logo-menu .logo {
+.logo {
   width: 100px;
   height: 70px;
   cursor: pointer;
-  margin-top: -20px;
+  margin-top: -10px;
 }
 
 .center-nav {
@@ -81,11 +80,11 @@ header .up {
 }
 
 .center-nav .microphone {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   cursor: pointer;
+  margin-top: 15px;
   border-radius: 50%;
-  /* background-color: rgb(231, 231, 231); */
 }
 
 .right-nav {
@@ -101,10 +100,13 @@ header .up {
   height: 35px;
   cursor: pointer;
 }
+.right-nav .notification {
+  margin-top: 10px;
+}
 
 .down {
   display: grid;
-  grid-template-columns: 1fr 8fr;
+  grid-template-columns: 1.5fr 10fr;
   height: 100%;
 }
 
@@ -112,17 +114,12 @@ header .up {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  /* padding-top: 20px; */
   height: 100%;
-  /* margin-left: 20px; */
-  /* width: 200px; */
-  /* background-color: rgb(152, 64, 64); */
 }
 
 .left-scroll .left {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   gap: 30px;
   padding-top: 20px;
 }
@@ -140,8 +137,6 @@ header .up {
   gap: 10px;
   width: 100%;
   padding: 10px;
-  /* height: 100%; */
-  /* height: 40px; */
 }
 
 .homediv:hover,
@@ -154,9 +149,6 @@ header .up {
   background-color: rgb(186, 181, 181);
 }
 
-.icon-titlee {
-  /* display: none; */
-}
 .act {
   width: 100%;
 }
@@ -168,14 +160,10 @@ header .up {
   align-items: flex-start;
   gap: 30px;
   height: 100%;
-  /* background-color: blue; */
-  /* background-color: white; */
 }
 .active .homediv .hm {
-  /* position: absolute; */
   display: flex;
   flex-direction: row;
-  /* width: 50px; */
 }
 
 .active .homediv {
@@ -190,7 +178,6 @@ header .up {
   flex-direction: row;
   gap: 20px;
   width: 100%;
-  /* height: 200px; */
   align-items: center;
   text-align: center;
   overflow-x: auto;
@@ -205,7 +192,6 @@ header .up {
   background-color: rgb(231, 231, 231);
   display: grid;
   grid-template-rows: min-content;
-  /* width: 5%; */
 }
 
 .cards {
@@ -214,7 +200,7 @@ header .up {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 25px;
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(240, 237, 237);
 }
 .cards p {
   color: black;
@@ -223,10 +209,9 @@ header .up {
 
 .cards .video-img {
   width: 100%;
-  /* border-radius: 10px; */
 }
 .cards .video {
-  padding: 20px;
+  /* padding: 20px; */
 }
 .video-title {
   display: flex;
@@ -237,10 +222,11 @@ header .up {
 a {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-decoration: none;
-  color: aqua;
 }
 
 .video-title img {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
 
@@ -248,10 +234,16 @@ a {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 .subscriptions p {
-  padding: 10px;
+  padding-left: 10px;
+  font-weight: bold;
+  color: rgb(62, 60, 60);
+}
+.icon-title {
+  color: rgb(63, 63, 63);
+  font-weight: 900;
 }
 
 .subElements {
@@ -283,6 +275,17 @@ a {
   }
 }
 
+@media (max-width: 1000px) {
+  .down {
+    display: grid;
+    grid-template-columns: 8% 92%;
+  }
+  .subscript,
+  .icon-title {
+    display: none;
+  }
+}
+
 @media (max-width: 1100px) {
   .cards .video {
     width: 100%;
@@ -294,9 +297,6 @@ a {
 }
 
 @media (max-width: 800px) {
-  /* .video {
-    width: 70%;
-  } */
   .cards .video {
     width: 100%;
   }
