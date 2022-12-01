@@ -4,8 +4,7 @@
 }
 
 body {
-  display: grid;
-  grid-template-columns: 12% 88%;
+  margin-top: 20px;
 }
 
 .center {
@@ -15,29 +14,16 @@ body {
   /* width: 95%; */
 }
 
-.cards {
-  height: 100%;
-  color: black;
-}
-
 header {
   margin: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  /* border-bottom: 1px solid gray; */
-  height: 15vh;
 }
 header .up {
   margin: 0;
   display: flex;
   flex-direction: row;
-  /* margin-left: 20%; */
-  justify-content: space-evenly;
-  border-bottom: 1px solid gray;
-}
-header .up .right-nav {
-  margin-bottom: 15px;
 }
 
 .left-scroll .left .logo-menu {
@@ -68,7 +54,6 @@ header .up .right-nav {
 }
 
 .search {
-  margin-top: 20px;
   width: 40vw;
   max-width: 500px;
   height: 40px;
@@ -82,7 +67,6 @@ header .up .right-nav {
 }
 
 .search-form .submit-search {
-  margin-top: 20px;
   height: 40px;
   width: 50px;
   outline: none;
@@ -97,28 +81,31 @@ header .up .right-nav {
 }
 
 .center-nav .microphone {
-  margin-top: 20px;
   width: 40px;
   height: 40px;
   cursor: pointer;
   border-radius: 50%;
-  background-color: rgb(231, 231, 231);
+  /* background-color: rgb(231, 231, 231); */
 }
 
 .right-nav {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  margin-right: 20px;
 }
 
 .right-nav .add-video,
 .right-nav .notification,
 .right-nav .profile {
-  margin-top: 20px;
   width: 35px;
   height: 35px;
   cursor: pointer;
+}
+
+.down {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  height: 100%;
 }
 
 .left-scroll {
@@ -138,38 +125,35 @@ header .up .right-nav {
   /* align-items: center; */
   gap: 30px;
   padding-top: 20px;
-  margin-left: 20px;
 }
 
-.left .left-scroll .icon-title {
-  display: inline-block;
-}
-
-.left-scroll .title-active {
-  display: inline-block;
-}
-
-.left-scroll .left {
-  border-bottom: 1px solid gray;
-}
-
-.left-scroll .left .menu span,
-.left-scroll .left .homediv,
-.left-scroll .left .shorts,
-.left-scroll .left .subscribers,
-.left-scroll .left .library,
-.left-scroll .left .history,
-.left-scroll .left .myVideos,
-.left-scroll .left .watchLater,
-.left-scroll .left .likedVideos {
-  width: 35px;
-  height: 35px;
+.left-scroll .homediv,
+.trenddiv,
+.subscriptdiv,
+.librarydiv,
+.historydiv,
+.laterdiv,
+.likeddiv {
   cursor: pointer;
-}
-.left-scroll .left .homediv {
   display: flex;
   flex-direction: row;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  /* height: 100%; */
+  /* height: 40px; */
 }
+
+.homediv:hover,
+.trenddiv:hover,
+.subscriptdiv:hover,
+.librarydiv:hover,
+.historydiv:hover,
+.laterdiv:hover,
+.likeddiv:hover {
+  background-color: rgb(186, 181, 181);
+}
+
 .icon-titlee {
   /* display: none; */
 }
@@ -199,11 +183,8 @@ header .up .right-nav {
   flex-direction: row;
   gap: 5px;
 }
-.active .icon-titlee {
-  /* display: none; */
-}
 
-.down {
+.down-cat {
   margin-top: 15px;
   display: flex;
   flex-direction: row;
@@ -217,7 +198,7 @@ header .up .right-nav {
   scroll-snap-type: inline mandatory;
 }
 
-.down span {
+.down-cat span {
   border-radius: 20px;
   cursor: pointer;
   padding: 10px;
@@ -228,24 +209,39 @@ header .up .right-nav {
 }
 
 .cards {
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 25px;
-  margin-top: -70px;
+  background-color: rgb(233, 233, 233);
 }
 .cards p {
   color: black;
-
   text-decoration: none;
 }
 
 .cards .video-img {
   width: 100%;
+  /* border-radius: 10px; */
+}
+.cards .video {
+  padding: 20px;
 }
 .video-title {
   display: flex;
   flex-direction: row;
   gap: 5px;
+}
+
+a {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-decoration: none;
+  color: aqua;
+}
+
+.video-title img {
+  border-radius: 50%;
 }
 
 .subscriptions {
@@ -254,32 +250,30 @@ header .up .right-nav {
   gap: 20px;
   margin-top: 20px;
 }
+.subscriptions p {
+  padding: 10px;
+}
 
 .subElements {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
-.likedVideos .icon-title {
-  /* border-bottom: 1px solid gray; */
+
+.subElements .sub:hover {
+  background-color: rgb(193, 188, 188);
 }
 
 .subElements .sub {
+  padding: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
   gap: 10px;
 }
-.subElements .sub img {
-  width: 50px;
-  border-radius: 50%;
-}
 
 @media (max-width: 1450px) {
-  /* .video {
-    width: 70%;
-  } */
   .cards .video {
     width: 100%;
   }
@@ -290,9 +284,6 @@ header .up .right-nav {
 }
 
 @media (max-width: 1100px) {
-  /* .video {
-    width: 70%;
-  } */
   .cards .video {
     width: 100%;
   }

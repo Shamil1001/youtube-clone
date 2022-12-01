@@ -20,7 +20,10 @@ function displayVideo() {
     ><img class='video-img' src='https://i.ytimg.com/vi/cLfSpFg6Pxg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDp5q3gcyOE7viwmEDFPyPYqQ9xfw'/>
     <div class='video-title'>
     <img src='https://yt3.ggpht.com/xZbliDrv1hQJOWfLsK29iWa0pQUWTr-1AO-vluYNr_PPCcvoDUog8IMEH4nAKQFdPHdmlwoy=s48-c-k-c0x00ffffff-no-rj'/>
-    <p>HIGHLIGHTS: Juventus vs Atletico Madrid - 3-0 - Ronaldo hat-trick completes comeback!</p>
+    <div class='video-name'><p>HIGHLIGHTS: Juventus vs Atletico Madrid - 3-0</p>
+    <p>BBC Sport</p>
+    <p>120k views; 2 years ago</p>
+    </div>
     </div>
     </a>`;
     console.log(arr[i]);
